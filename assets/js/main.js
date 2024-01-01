@@ -26,7 +26,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 /*=============== ADD BLUR TO HEADER ===============*/
 const BlurHeader = () => {
     const header = document.getElementById("header");
-    window.scrollY >= 50 ? header.classList.remove("blur-header")
+    window.scrollY < 50 ? header.classList.remove("blur-header")
         : header.classList.add("blur-header")
 };
 window.addEventListener("scroll", BlurHeader);
@@ -68,7 +68,7 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 3000,
     delay: 400,
-    reset: true,
+    // reset: true,
 })
 
 sr.reveal('.home__data, .explore__data ,.explore__user ,.footer__container')
